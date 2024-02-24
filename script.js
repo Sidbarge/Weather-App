@@ -93,6 +93,7 @@ async function fetchUserWeatherInfo(coordinates) {
     // console.log(data)
     loadingScreen.classList.remove("active")
     userInfoContainer.classList.add("active")
+    apiErrorContainer.classList.remove("active")
     renderWeatherInfo(data)
   } catch (error) {
     loadingScreen.classList.remove("active");
@@ -147,6 +148,7 @@ async function fetchSearchWeatherInfo(city) {
       throw data;
     }
     loadingScreen.classList.remove("active")
+    apiErrorContainer.classList.remove("active")
     userInfoContainer.classList.add("active")
     renderWeatherInfo(data)
   } catch (error) {
